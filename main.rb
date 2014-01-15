@@ -24,7 +24,7 @@ def valid_phone_numbers(source_text)
 end
 
 def area_codes(source_text)
-  valid_area_codes = $source_text.scan(/[2-9][0-8][0-9]/)
+  valid_area_codes = $source_text.scan(/(?<=\s)[2-9][0-8][0-9](?=-)/)
 end
 
 def email_addresses(source_text)
@@ -35,8 +35,6 @@ def zip_codes(source_text)
   valid_zip_codes = $source_text.scan(/\b[0-9]{5}\b/)
 end
 def hex_colors(source_text)
-
-  #A-F, 0-9
   valid_hex_colors = $source_text.scan(/(?<=#)[0-9a-f]{6}/)
 end
 
