@@ -28,7 +28,7 @@ def area_codes(source_text)
 end
 
 def email_addresses(source_text)
-  valid_email_addresses = $source_text.scan()
+  valid_email_addresses = $source_text.scan(/\b[a-z]+@[a-z]+\.[a-z]{3}\b/)
 end
 
 def zip_codes(source_text)
